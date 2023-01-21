@@ -27,7 +27,7 @@
 
   <footer>
     <p class="twitterfoot">
-      by <a href="https://twitter.com/iriasviel">Iri</a>
+      by <a href="https://twitter.com/yinkus10">YiNkZZ</a>
     </p>
   </footer>
 </div>
@@ -40,8 +40,8 @@
       "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: #424242;
-    background-color: #262626;
+    color: #363535;
+    background-color: #010101;
   }
   .styling {
     width: 5vmin;
@@ -52,12 +52,12 @@
   }
 
   button {
-    font-weight: 600;
-    background-color: #4c4a4a;
+    font-weight: 500;
+    background-color: #503737;
   }
 
   .slogan {
-    font-size: 1.7em;
+    font-size: 1.9em;
     margin-bottom: 0;
     color: #ffffff;
   }

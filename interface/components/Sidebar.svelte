@@ -21,13 +21,18 @@
   }
 </script>
 
+<!-- svelte-ignore a11y-mouse-events-have-key-events -->
 <nav class:expanded={isExpanded} on:mouseover={() => mouseover()}>
   <ul>
     {#if isExpanded}
-      <li on:click={() => handleHome()}>🏠 Home</li>
-      <li on:click={() => handleView()}>🚀 View</li>
-      <li on:click={() => handleCreate()}>⭐️ Create</li>
-      <li on:click={() => handleVote()}>🗑 Vote</li>
+      <!-- svelte-ignore a11y-click-events-have-key-events -->
+      <li on:click={() => handleHome()}> Home 🏠</li>
+      <!-- svelte-ignore a11y-click-events-have-key-events -->
+      <li on:click={() => handleView()}> View 🚀</li>
+      <!-- svelte-ignore a11y-click-events-have-key-events -->
+      <li on:click={() => handleCreate()}> Create ⭐️</li>
+      <!-- svelte-ignore a11y-click-events-have-key-events -->
+      <li on:click={() => handleVote()}> Vote 🗑</li>
     {/if}
   </ul>
 </nav>
@@ -35,17 +40,17 @@
 <style>
   nav {
     min-height: 100vh;
-    background-color: #262626;
+    background-color: #010101;
     color: #a2b7c4;
     transition: ease-out 200ms;
-    width: 13vmin;
+    width: 12vmin;
     position: relative;
   }
 
   .expanded {
     transition: ease-out 200ms;
     min-height: 100vh;
-    background-color: #4c4a4a;
+    background-color: rgb(14, 13, 13);
     color: #ffffff;
     transition: ease-out 200ms;
     width: 16vmin;
@@ -72,7 +77,7 @@
   }
 
   li:hover {
-    background-color: #6e6b6b;
+    background-color: #407896;
     transition: 300ms;
     transform: scale(1.08);
   }

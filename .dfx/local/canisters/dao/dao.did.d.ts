@@ -11,6 +11,7 @@ export interface Proposal {
 export interface _SERVICE {
   'get_all_proposals' : ActorMethod<[], Array<[bigint, Proposal]>>,
   'get_proposal' : ActorMethod<[bigint], [] | [Proposal]>,
+  'pay_to_access' : ActorMethod<[], string>,
   'submit_proposal' : ActorMethod<
     [string],
     { 'Ok' : Proposal } |

@@ -12,6 +12,7 @@ service : {
                                   Proposal;
                                 }) query;
   get_proposal: (int) -> (opt Proposal) query;
+  pay_to_access: () -> (text);
   submit_proposal: (text) -> (variant {
                                 Err: text;
                                 Ok: Proposal;

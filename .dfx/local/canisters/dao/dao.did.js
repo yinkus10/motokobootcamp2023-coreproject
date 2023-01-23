@@ -13,6 +13,7 @@ export const idlFactory = ({ IDL }) => {
         ['query'],
       ),
     'get_proposal' : IDL.Func([IDL.Int], [IDL.Opt(Proposal)], ['query']),
+    'pay_to_access' : IDL.Func([], [IDL.Text], []),
     'submit_proposal' : IDL.Func(
         [IDL.Text],
         [IDL.Variant({ 'Ok' : Proposal, 'Err' : IDL.Text })],

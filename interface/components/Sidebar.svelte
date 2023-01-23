@@ -26,13 +26,13 @@
   <ul>
     {#if isExpanded}
       <!-- svelte-ignore a11y-click-events-have-key-events -->
-      <li on:click={() => handleHome()}> Home 🏠</li>
+      <li on:click={() => handleHome()}>  Home 🏠</li>
       <!-- svelte-ignore a11y-click-events-have-key-events -->
-      <li on:click={() => handleView()}> View 🚀</li>
+      <li on:click={() => handleView()}>  View 🚀</li>
       <!-- svelte-ignore a11y-click-events-have-key-events -->
-      <li on:click={() => handleCreate()}> Create ⭐️</li>
+      <li on:click={() => handleCreate()}>  Create ⭐️</li>
       <!-- svelte-ignore a11y-click-events-have-key-events -->
-      <li on:click={() => handleVote()}> Vote 🗑</li>
+      <li on:click={() => handleVote()}>  Vote 🗑</li>
     {/if}
   </ul>
 </nav>

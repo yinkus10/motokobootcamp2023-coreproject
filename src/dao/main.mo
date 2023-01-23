@@ -10,6 +10,7 @@ import Debug "mo:base/Debug";
 import Hash "mo:base/Hash";
 import Option "mo:base/Option";
 import Principal "mo:base/Principal";
+import Cycles "mo:base/ExperimentalCycles";
 
 actor {
     
@@ -45,6 +46,18 @@ actor {
 
     //var get_proposal = HashMap.HashMap<Nat, Proposal>(1, Nat.equal, Hash.hash); 
     
+    let AMOUNT_TO_PAY : Nat = 100_000;
+    
+    public func pay_to_access() : async Text {
+        if(Cycles.available() < 100_000) {
+            return("This is not enough, send more cycles.");
+        };
+        
+        let received = Cycles.accept(AMOUNT_TO_PAY);
+        return("Thanks for paying, you are now a premium user 😎");
+    };
+
+
 
     public shared({caller}) func submit_proposal(this_payload : Text) : async {#Ok : Proposal; #Err : Text} {
         Debug.print(debug_show(Time.now())#" submit called ");
@@ -81,6 +94,7 @@ actor {
     public query func get_proposal(id : Int) : async ?Proposal {
         Debug.print(debug_show(Time.now())#" get  called   ");
         usernames.get(id); 
+        
     };
     
     public query func get_all_proposals() : async [(Int, Proposal)] {
